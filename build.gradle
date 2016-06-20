@@ -1,0 +1,44 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url "https://plugins.gradle.org/m2/" }
+        }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.2'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        minSdkVersion 1
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+def okhttp_version = "3.2.0"
+
+dependencies {
+    provided "com.squareup.okhttp3:okhttp:${okhttp_version}"
+    provided 'com.jakewharton.timber:timber:4.1.1'
+
+    compile 'org.apache.commons:commons-lang3:3.4'
+
+}
