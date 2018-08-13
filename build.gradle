@@ -37,7 +37,6 @@ def okhttp_version = "3.2.0"
 
 dependencies {
     provided "com.squareup.okhttp3:okhttp:${okhttp_version}"
-    provided 'com.jakewharton.timber:timber:4.1.1'
 
     compile 'org.apache.commons:commons-lang3:3.4'
 

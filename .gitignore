@@ -1,0 +1,10 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+package-lock.json
+node_modules/
